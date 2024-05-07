@@ -11,7 +11,6 @@ indice = "BZ=F"
 inicio = "2009-01-01"
 dados_acao = yf.download(indice, inicio)
 df_cotacoes = pd.DataFrame({indice: dados_acao['Close']})
-print(df_cotacoes)
 df = df_cotacoes
 df.index.name = 'ds'
 df.rename(columns={'BZ=F': 'y'}, inplace=True)
